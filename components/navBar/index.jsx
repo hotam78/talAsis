@@ -4,6 +4,6 @@ import styles from './styles.module.scss'
 
 export default function NavBar() {
   return (
-    <div>NavBar</div>
+    <div>Hotam do navBar</div>
   )
 }
