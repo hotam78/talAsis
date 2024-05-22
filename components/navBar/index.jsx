@@ -11,6 +11,7 @@ import Link from 'next/link'
 export default function NavBar() {
   return (
     <div className={styles.header}>
+
       <div className={styles.phone}>
         <div className={styles.pink}>משלוחים והחזרות חינם</div>
         <div className={styles.navBarP}>
@@ -27,9 +28,7 @@ export default function NavBar() {
               <PiShoppingCartSimpleThin />
             </div>
           </div>
-
         </div>
-
       </div>
 
       <div className={styles.computer}>
