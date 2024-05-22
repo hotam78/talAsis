@@ -35,6 +35,9 @@ const ItemSchema = new mongoose.Schema({
         type: Number,
       },
     //   collection: String,
+    // isLiked: {
+    //   type: Boolean,
+    // }
 });
 
 

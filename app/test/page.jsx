@@ -9,6 +9,7 @@ import items from './fakeData';
 export default async function Test() {
 
     await connectToMongo();
+    
     // const categories = [
     //     { title: { en: 'Earrings', he: 'עגילים' }, img: 'earrings.jpg' },
     //     { title: { en: 'Rings', he: 'טבעות' }, img: 'rings.jpg' },
