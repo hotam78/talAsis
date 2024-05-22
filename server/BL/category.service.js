@@ -1,4 +1,4 @@
-import { createCategory, readCats, readOneCat } from "../DL/controllers/category.controller"; 
+import { createCat, readCats, readOneCat } from "../DL/controllers/category.controller"; 
 
 export async function createNewCat(data) {
     const newCat = createCat({...data});
