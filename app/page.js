@@ -7,7 +7,12 @@ import { connectToMongo } from "@/server/DL/connectToMongo";
 
 export default function Home() {
   const bestSellers = [{ images: ['', ''], title: 'צמיד מרוקאי', price: 167, discount: 10 }, { images: ['', ''], title: 'טבעת יהלום', price: 200, discount: 10 }, { images: ['', ''], title: 'עגילי פנינה', price: 167, discount: 10 }, { images: ['', ''], title: 'שרשרת נהורא', price: 1060, discount: 20 }, { images: ['', ''], title: 'עגילי חישוק', price: 400, discount: 0 }];
-   
+  const categories = [
+    { title: { en: 'Earrings', he: 'עגילים' }, img: '/Earrings.jpg' },
+    { title: { en: 'Rings', he: 'טבעות' }, img: '/rings.jpg' },
+    { title: { en: 'Necklaces', he: 'שרשראות' }, img: '/Necklaces.jpg' },
+    { title: { en: 'Bracelets', he: 'צמידים' }, img: '/Bracelets.jpg' },
+  ];
   return (
     <div className={styles.home}>
 
@@ -23,7 +28,19 @@ export default function Home() {
         <div className={styles.items}>{bestSellers.map(item => <Item item={item} />)}</div>
       </div>
 
-      {/* <div className={styles.categories}></div> */}
+      <div className={styles.categories}>
+        {categories.map((category) => {
+          return <div className={styles.category}>
+            <Image src={category.img} alt='img1' fill />
+            <p>{category.title.en}</p>
+
+          </div>
+        })}
+        <p>"I have enough jewelry"</p>
+      </div>
+
+
+
     </div>
   )
 }
