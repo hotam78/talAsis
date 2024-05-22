@@ -7,7 +7,7 @@ import Link from 'next/link'
 // TODO- קומפוננטה של אייקונים שמחקבלת שם ופונקציתת לחיצה ואולי גם אם אהוב או לא (בשביל הלבבות)
 
 
-export default function Item({item, width='17vw'}) {
+export default function Item({item, width='200px'}) {
   // TODO- צריך לבדוק פה אם אקטיב או שסומכים על השרת?
   const {images, title, price, discount, _id } = item;
   return (

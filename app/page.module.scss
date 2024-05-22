@@ -36,12 +36,13 @@
       padding: 1rem;
       gap: 1rem;
       justify-content: space-between; 
-      // @media (max-width: 550px) {
-      //   overflow-x: hidden;
-      //   & > div {
-      //     width: 200px;
-      //   }
-      // }
+      @media (max-width: 550px) {
+        overflow-x: scroll;
+        width:100%;
+        // & > div {
+        //   width: 200px;
+        // }
+      }
     }
 
   }
