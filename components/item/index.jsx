@@ -11,8 +11,7 @@ export default function Item({item}) {
   const { images, title, price, discount, _id, category } = item;
   // console.log('itemCOMP!!', item);
   return (
-    // TODO- לשלוח פה לאייטם/איידי או לקטגורי/איידי
-    <Link href={`category/${true}/${_id}`}>
+    <Link href={`category/${category.title.en}/${_id}`}>
       <div className={styles.item}>
 
         <div className={styles.img}>
