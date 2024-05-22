@@ -1,0 +1,19 @@
+@import '../../app/vars';
+
+
+.items {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: space-between; 
+
+    @media (max-width: 550px) {
+      overflow-x: scroll;
+      width:100%;
+
+      & > a {
+        flex-shrink: 0;
+        // width: 50%;
+      }
+    }
+  }

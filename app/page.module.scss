@@ -15,11 +15,22 @@
     height: 50vh;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & > img{
       width: 100%;
       object-fit: cover;
     }
+
+    & > p {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 10px;
+    }
+
+
   }
 
   .bestSellers {
@@ -31,17 +42,21 @@
     & > h2 {
       font-weight: 300;
     }
-    & > div {
+    
+    & > .items {
       display: flex;
       padding: 1rem;
       gap: 1rem;
       justify-content: space-between; 
+
       @media (max-width: 550px) {
         overflow-x: scroll;
         width:100%;
-        // & > div {
-        //   width: 200px;
-        // }
+
+        & > a {
+          flex-shrink: 0;
+          width: 50%;
+        }
       }
     }
 

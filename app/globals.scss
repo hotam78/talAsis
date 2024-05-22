@@ -6,9 +6,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    color: $black;
+}
+
 body {
     direction: rtl;
-    color: $black;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
 }
 
 a {
