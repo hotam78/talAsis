@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from './styles.module.scss'
 import { PiHeartLight } from "react-icons/pi"
 import Image from 'next/image'

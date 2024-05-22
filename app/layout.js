@@ -1,8 +1,10 @@
-import { Assistant } from "next/font/google";
+import { Assistant, Whisper } from "next/font/google";
 import "./globals.scss";
 import NavBar from "@/components/navBar";
 
-const assistant = Assistant({ subsets: ["latin"], weight:['200','300','400','500','600','700','800'] });
+const assistant = Assistant({ subsets: ["latin"], weight: ['200', '300', '400', '500', '600', '700', '800'] });
+const whisper = Whisper({ subsets: ["latin"], variable: '--font-whisper', weight: ['400'] });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -12,10 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={assistant.className}>
-        <NavBar/>
+      <body className={`${assistant.className} ${whisper.variable}`}>
+
+        <NavBar />
         {children}
-        </body>
+      </body>
     </html>
   );
 }
