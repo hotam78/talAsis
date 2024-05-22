@@ -1,4 +1,4 @@
-import { createItem } from '../DL/controllers/item.controller';
+import { createItem, read, readOne } from '../DL/controllers/item.controller';
 
 export async function createNewItem(data) {
     const newItem = createItem(data);
@@ -6,4 +6,34 @@ export async function createNewItem(data) {
     console.log(newItem);
     return newItem;
 }
+
+
+export async function getOneItem(id) {
+    const item = readOne({ _id: id })
+    if (!item) throw 'is item not valid'
+    console.log(item);
+    return item
+}
+
+
+export async function getAllItem() {
+    const items = read()
+
+    console.log(items);
+    return items
+}
+
+
+
+
+
+
+export async function getItemByCategory(catId) {
+    console.log("#############", catId);
+
+    const items = read({ category: catId })
+    if (!items) throw 'is items not valid'
+    return items
+}
+
 
