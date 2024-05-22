@@ -6,7 +6,7 @@ import { model } from 'mongoose';
 import React from 'react'
 import items from './fakeData';
 
-export default async function Page() {
+export default async function Test() {
 
   await connectToMongo();
 

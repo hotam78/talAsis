@@ -1,0 +1,146 @@
+@import '../../app/vars';
+
+.header {
+    .pink {
+        font-size: 0.8rem;
+        background-color: $pink;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
+        // font-size: 0.8rem;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > .right {
+            // border: 1px solid $black;
+            width: 8rem;
+        }
+
+        & > .left {
+            // border: 1px solid $black;
+            width: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .logo {
+            font-size: 2rem;
+        }
+    }
+    svg {
+        font-size: 1.5rem;
+    }
+}
+
+.header > .phone {
+
+    @media (min-width: 550px) {
+              display: none;
+      }
+    // display: flex;
+    // flex-direction: column;
+
+    .top {
+        padding: 0.8rem 0.5rem 1rem 0.5rem;
+
+        .logo {
+            font-size: 1.3rem;
+        }
+    }
+    
+}
+
+
+.header > .computer {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 550px) {
+          display: none;    
+      }
+    
+
+    & > .hidden {
+
+        & > .pink {
+            font-size: 0.8rem;
+            background-color: $pink;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            // font-size: 0.8rem;
+        }
+        & > .more {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5% 4%;
+
+            & > .right > span {
+                padding-left: 2rem;
+            }
+
+            & > .left {
+                display: flex;
+                gap: 0.5rem;
+
+                & > svg {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .navBar {
+        border-top: 0.1px solid $gray;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        // & svg {
+        //     font-size: 1.5rem;
+        // }
+
+        // & > .top {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: space-between;
+
+        //     & > .right {
+        //         // border: 1px solid $black;
+        //         width: 8rem;
+        //     }
+
+        //     & > .left {
+        //         // border: 1px solid $black;
+        //         width: 8rem;
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: end;
+        //         gap: 10px;
+        //     }
+
+        //     & .logo {
+        //         font-size: 2rem;
+        //     }
+        // }
+        & > .menu {
+            display: flex;
+            gap: 1.5%;
+            justify-content: center;
+
+            & > span:hover {
+                // TODO- להוסיף אנימציה ושהגבול יהיה בתוך הדיב ולא ידחוף החוצה
+                border-bottom: 1.5px $black solid;
+            }
+        }
+    }
+}
+
